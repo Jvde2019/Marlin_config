@@ -1138,7 +1138,7 @@
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
 #define X_MIN_ENDSTOP_INVERTING true  // Set to true to invert the logic of the endstop.
 #define Y_MIN_ENDSTOP_INVERTING true  // Set to true to invert the logic of the endstop.
-#define Z_MIN_ENDSTOP_INVERTING true  // Set to true to invert the logic of the endstop.
+#define Z_MIN_ENDSTOP_INVERTING false  // Set to true to invert the logic of the endstop.
 #define I_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define J_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define K_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
@@ -1381,7 +1381,7 @@
 /**
  * The BLTouch probe uses a Hall effect sensor and emulates a servo.
  */
-//#define BLTOUCH
+#define BLTOUCH
 
 /**
  * MagLev V4 probe by MDD
@@ -2203,15 +2203,15 @@
  * - Allows Z homing only when XY positions are known and trusted.
  * - If stepper drivers sleep, XY homing may be required again before Z homing.
  */
-//#define Z_SAFE_HOMING
+#define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
   #define Z_SAFE_HOMING_X_POINT X_CENTER  // (mm) X point for Z homing
   #define Z_SAFE_HOMING_Y_POINT Y_CENTER  // (mm) Y point for Z homing
 
   // Anet A6 with new X-Axis
-  //#define Z_SAFE_HOMING_X_POINT 113    // (mm) X point for Z homing
-  //#define Z_SAFE_HOMING_Y_POINT 112    // (mm) Y point for Z homing
+  #define Z_SAFE_HOMING_X_POINT 113    // (mm) X point for Z homing
+  #define Z_SAFE_HOMING_Y_POINT 112    // (mm) Y point for Z homing
 
   // Anet A6 with new X-Axis and defined X_HOME_POS -7, Y_HOME_POS -6
   //#define Z_SAFE_HOMING_X_POINT 107    // (mm) X point for Z homing
